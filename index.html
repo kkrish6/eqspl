@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>EQSPL</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
+  <meta name="viewport" content="width=1000; user-scalable=0;" />  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|KoHo|Caveat|Roboto Slab|Merienda One|Spectral
+  ">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    /* font: 400 15px Lato, sans-serif; */
+   font-family: KoHO;
+    line-height: 1.8;
+    background-color: #73b9fc;
+    
+  }
+
+
+
+  h1{
+    font-size:5.9vw;
+    font-family:Merienda One;
+  }
+  h2 {
+    /* font-size: 24px; */
+    font-family:Roboto Slab;
+    font-size: 3.2vw;
+    text-transform: uppercase;
+    color: #1136da;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h3{
+    color: #303030;
+    font-family:Spectral;
+  }
+  h4 {
+   
+    font-size: 1.9vw;
+    line-height: 2em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  p{
+font-size: 1.7vw;
+  }
+ 
+
+
+  .jumbotron {
+    
+    width: 100%;
+    height: 100vh;
+    background-image: url('j.jpg');
+    
+    background-repeat: no-repeat;
+  background-attachment: contain;
+  background-size: cover;
+  
+
+ 
+ 
+    /* background-color: #4de2ce; */
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+    
+  }
+
+  /* .jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+    background-color: rgba(0, 0, 0, 0.25);
+} */
+
+
+
+
+
+
+
+
+#title {
+  position: relative;
+    
+  font-size: 15rem;
+  line-height: 0.9;
+  text-align: center;
+}
+  
+
+
+
+
+
+ 
+
+  .fixedwidth {
+    width: 1050px;
+    margin: 0 auto;
+}
+  
+
+
+
+#about{
+  
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(nightdome.jpg);
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.945);
+  
+  
+}
+
+#value{
+   
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(hd2.jpg);
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.945);
+
+}
+
+
+
+.sector{
+  text-align:center;
+  margin-top:-20px;
+margin-bottom:-30px;
+}
+/* .linea{
+  background-color:#555353;
+
+}
+.lineb{
+  background-color:#777677;
+} */
+
+
+.rainbow-text {
+  /* Create a conic gradient. */
+  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+  background: #CA4246;
+  background-color: #CA4246;
+  background: conic-gradient(
+    #ec2828 16.666%, 
+    #e44b30 16.666%, 
+    #11aa0c 33.333%, 
+    #0b8d46 33.333%, 
+    #db250d 50%, 
+    #d9fc65 50%, 
+    #f1410b 66.666%, 
+    #12eb41 66.666%, 
+    #e94311 83.333%, 
+    #58f87b 83.333%);
+  
+  /* Set thee background size and repeat properties. */
+  background-size: 57%;
+  background-repeat: repeat;
+  
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+  cursor: pointer;
+}
+
+/* Add animation on hover. */
+.rainbow-text:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+}
+
+
+
+.blur{
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(8px);
+}
+.spacevalue{
+  padding-left: 3cm;
+}
+
+
+  .container-fluid {
+    padding: 60px 50px;
+    /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); */
+    
+  
+  }
+
+  #contact{
+    padding: 60px 50px;
+  }
+  .con{
+    
+    text-align: center;
+    padding: 60px 50px;
+    /* background-color:aquamarine */
+  }
+  .serviceareas{
+    background-color:rgb(177, 212, 201)
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+
+    /* background-color:rgb(57, 224, 169); */
+    color: #555353;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+    
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+
+
+
+  
+  .navbar {
+    height: 50px;
+    margin-bottom: 0;
+    background-color:rgb(97, 95, 95);
+    
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    
+    background-color: transparent;
+   
+  }
+
+  .navbar.solid {
+  background-color: #777677;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+}
+.navbar.solid .navbar-brand {
+  color: #C57ED3;
+  transition: color 1s ease 0s;
+}
+.navbar.solid .navbar-nav > li > a {
+  color: #C57ED3;
+  transition: color 1s ease 0s;
+}
+
+
+
+
+
+
+
+  .navbar li a, .navbar .navbar-brand {
+
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #ffffff !important;
+    background-color: rgb(10, 10, 10) !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: rgb(253, 253, 253) !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  .imgindiv{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:5cm;
+  width: 20%;
+  
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .timeline {
+  font: normal 16px/1.5 "Titillium Web", sans-serif;
+  background: linear-gradient(54deg, #9164ff, #8bfff4);
+  color: #3c3f64;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: #eee;
+}
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.timeline ul li div time {
+  position: absolute;
+  background: #f5af19;
+  width: 80px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.timeline ul li div div {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timeline ul li div div p {
+  text-align: center;
+}
+.timeline ul li div .discovery {
+  margin-right: 10px;
+}
+.timeline ul li:nth-of-type(odd) > div {
+  left: 45px;
+}
+.timeline ul li:nth-of-type(even) > div {
+  left: -439px;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.timeline ul li:nth-of-type(odd) div {
+  transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+.timeline ul li:nth-of-type(even) div {
+  transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* 
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  } */
+
+
+@media screen and (max-width: 900px) {
+ 
+
+ 
+  .timeline ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+  .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+@media screen and (max-width: 600px) {
+ 
+  body{
+      width: 600px;
+      height: 100%;
+    }
+  
+    
+   
+
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+}
+
+
+
+ 
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+   
+    body{
+      width: 768px;
+      height: 100%;
+      
+    }
+   
+    
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+   
+    .logo {
+      font-size: 150px;
+    }
+    body{
+      width: 700px;
+      height: 100%;
+      
+      
+    }
+  
+  
+    
+    .col-sm-4 {
+      text-align: center;
+      
+      margin: 25px 0;
+    }
+    
+    .col-sm-6 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    
+   
+  }
+
+
+  
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav  id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="logo.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <!-- <a class="navbar-brand" href="#myPage">HOME<img src="logo.ico"></a> -->
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#value">OUR VALUES</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#resources">RESOURCES</a></li>
+          
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+
+  
+
+
+
+
+  
+
+<div class="jumbotron text-center"  >
+  
+  <h1  id="title" style="padding-top: 3cm; font-size: 60px;" >EBULLIENT QUALITY SERVICES <br><br> PRIVATE LIMITED</h1> 
+  <p style="color:rgb(245, 245, 18);font-family:Caveat;font-size:1cm;">Quality Endures</p>
+
+  <a href="#about"><i class="material-icons" style="font-size:48px;color:rgb(131, 236, 99)">arrow_downward</i> </a>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2 class="spacevalue slideanim" style="color:aliceblue">About Us</h2><br>
+      <h4 class="spacevalue" style="  color: rgba(255, 255, 255, 0.945);">We proudly introduce our self of “Ebullient Quality Services Private Limited” (EQSPL) as was established at 2020.
+        We offer Engineering & Consulting, Expediting, to clients and assist them to manage their Quality, Safety, Health & Environmental plans.
+        </h4>
+      <p class="spacevalue">Ebullient Quality Services Private Limited (EQSPL) is a customer-focussed, innovative and independent, technical, quality & safety services organization, dedicated to providing future- proof solutions through technological excellence for the success of its customers with the highest level of integrity. With a presence at locations in PAN India and all over countries in worldwide and through digital means, we are always connected to you, our esteemed customer, anywhere, anytime.</p>
+      <p class="spacevalue" style="font: size 16px;"> We are proud to provide increasing levels of services to the best known, largest global and national companies as well as medium and small industries in diverse sectors like Oil & Gas, Petrochemical, Power, Manufacturing, Chemicals, Automobiles, etc. 
+        . </p>
+      <br><a href=" #contact"> <button class="btn btn-default btn-lg" style="margin-left: 100px;">Get in Touch</button></a>
+    </div>
+    
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="value"  class="container-fluid">
+  <div class="row">
+    
+
+    <div  class="col-sm-8">
+      <h2 style="color:aliceblue" class="spacevalue slideanim">Our Values</h2><br>
+      <p class="spacevalue"><strong>MISSION:</strong>
+      <ul  style="font-size: 1.7vw; " class="spacevalue">
+        <li  >
+          We are determined to build a more efficient service delivery platform to better fulfil our customers’ needs, in a continuously changing market environment.
+        </li>
+        <li>
+          We succeed at this because of the integrity of our inspectors and support staff, our commitment to being respectful and considerate of our clients and of each other, and our passion for Continuing Education for learning the newest innovations of our industry.
+        </li>
+      </ul>
+      </p>
+      <br>
+      <p class="spacevalue"><strong>VISION:</strong> 
+        <ul style="font-size: 1.7vw; " class="spacevalue">
+          <li>
+            We will be the most valued business/inspection partner of all our customers.
+          </li>
+          <li>
+            Our goal is exceeding the client’s expectations by focusing on their needs.
+          </li>
+          <li>
+            We strive to be recognized as the most reliable and customer focused provider of testing, inspection, and verification services in our markets.
+          </li>
+        </ul>
+     </p>
+    </div>
+    <div class="col-sm-4" id="valueimage" >
+      <!-- <img src="image1.png" style="width:400px;
+      height: 225px;
+      width:400px; filter: drop-shadow(10px 10px 10px rgb(175, 240, 175));
+      object-fit: contain;
+      
+      border-style:outset;
+      border-color: aquamarine;
+      border-radius:10%;margin-bottom: 4px;"> 
+   
+      <img src="imagenew.jpg" style="width:400px; filter: drop-shadow(10px 10px 10px rgb(175, 240, 175));
+      height: 300px;
+      object-fit: contain;
+      text-shadow: 5px;
+      border-style:outset;
+      border-color: rgb(185, 245, 225);
+      border-radius:10%;"> -->
+    </div>
+
+
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center slideanim" >
+  <h2>SERVICE VALUES</h2>
+  <h4>WAY WE DO</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>QUALITY</h4>
+      <p>The best in class service</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE</h4>
+      <p>With great love and kindness</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>JOB DONE</h4>
+      <p>Perfection within time</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>ETHICS</h4>
+      <p>Desired work for your need</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>CERTIFIED</h4>
+      <p>Certified by </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">HARD WORK</h4>
+      <p>Always bet on us</p>
+    </div>
+  </div>
+</div>
+<!-- <div class="spacefiller"style="background-color:rgb(74, 190, 142) ;"></div> -->
+
+
+
+
+
+
+<div class="sector">
+  <h2  class="slideanim"style="padding-top: 20px;">INDUSTRIES COVERED</h2>
+</div> 
+  <!-- services done  -->
+  
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4><b>Oil and Gas Sector</b></h4>
+        <img class="imgindiv" src="ref1.jpg"
+        style="width:50%" alt="powerplant"  >
+      </div>
+      <div class="item">
+        <h4><b>Power Sector</b></h4>
+        <img class="imgindiv" src="powerplant.png" style="width:50%"
+        alt="powerplant"  >
+      </div>
+      <div class="item">
+        <h4><b>Transport and Automobile Sector</b></h4>
+        <img class="imgindiv" src="transport.png" style="width:50%" alt="powerplant"  >
+      </div>
+      <div class="item">
+        <h4><b> Petro Chemical Sector</b></h4>
+        <img class="imgindiv" src="chemical.png" style="width:50%" alt="powerplant"  >
+      </div>
+      <div class="item">
+        <h4><b>Electrical & Instrumentation Sector</b></h4>
+        <img class="imgindiv" src="electric.jpg" style="width:50%" alt="electrical"  >
+      </div>
+      <div class="item">
+        <h4><b>Food Industry</b></h4>
+        <img class="imgindiv" src="food.jpg" style="width:50%" alt="electrical"  >
+      </div>
+      <div class="item">
+        <h4><b>Softline / Hardline Industry</b></h4>
+        <img class="imgindiv" src="hardline1.jpg" style="width:50%" alt="electrical"  >
+      </div>
+      <div class="item">
+        <h4><b>Plastic Industry</b></h4>
+        <img class="imgindiv" src="plastic.jpg" style="width:50%" alt="electrical"  >
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+</div>
+  
+<section id="resources" class="timeline">
+  <h2 class="slideanim" style="text-align:center;padding-top:20px;">RESOURCES</h2>
+  <ul>
+    <li>
+      <div>
+        <time>1</time>
+        <div class="discovery">
+          <h3>Welding Inspector</h3>
+          
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2</time>
+        <div class="discovery">
+          <h3>Coating and Painting Inspector</h3>
+        
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>3</time>
+        <div class="discovery">
+          <h3>Softline / Hardline Inspector</h3>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>4</time>
+        <div class="discovery">
+          <h3>API Inspector</h3>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>5</time>
+        <div class="discovery">
+        <h3>Lead Auditor</h3>
+        </div>
+       
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>6</time>
+        <div class="discovery">
+          <h3>NDE Technician / Inspector</h3>
+        </div>
+       
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>7</time>
+        <div class="discovery">
+          <h3>IRATA Inspector</h3>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>8</time>
+        <div class="discovery">
+          <h3>E&I Inspector
+          </h3>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>9</time>
+        <div class="discovery">
+          <h3>Food Inspector
+          </h3>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>10</time>
+        <div class="discovery">
+          <h3>Automobile Inspector</h3>
+        </div>
+        
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+
+<!-- 
+</div>
+    <div class="col-sm-12" style="background-color: #73b9fc;"  >
+<h2 class="slideanim"style="text-align:center;padding-top:30px;"> MAJOR SERVICES</h2>
+<ul style="text-align:center" class="rolldown-list" id="myList">
+  <p class="linea" style="font-size:20px">Vendor Evaluation / Supplier Audit</p>
+  <p class="lineb" style="font-size:20px">Raw Material Inspection	<p>
+  <p class="linea" style="font-size:20px">Welding documents Preparation (WPS, PQR & WQT, QAP)</p>
+  <p class="lineb" style="font-size:20px">Stage, In-Process & Final Inspection<p>
+  <p class="linea" style="font-size:20px">Mechanical Inspection-Rotating & Static Equipment</p>
+  <p class="lineb" style="font-size:20px">Expediting <p>
+  <p class="linea" style="font-size:20px">Shutdown/Turnaround Inspection <p>
+  <p class="lineb" style="font-size:20px">Provision Technical Manpower </p>
+  <p class="linea" style="font-size:20px;">Pre-Dispatch Inspection </p>
+
+</ul> 
+</div> -->
+
+
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" style="background-color:rgb(199, 199, 199);" >
+  <h2 style="text-align:center;padding-top:10px;"  >CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-4">
+        
+      <p><span class="glyphicon glyphicon-user"></span>Balaji<br> Director- Accounting and technical</p>
+      <p><span class="glyphicon glyphicon-phone"></span>+91 83004 73493</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> balaji@eqspl.com</p>
+
+    </div>
+    <div class="col-sm-4">
+      
+      <p><span class="glyphicon glyphicon-user"></span>Parameshwaran <br> Director- Marketing and technical</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 97100 93377</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> parameshwaran@eqspl.com</p>
+
+    </div>
+
+   
+
+    <div class="col-sm-4 ">
+      
+      <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=enquiry@eqspl.com&body=my-text"><i class="fa fa-envelope"></i></a>
+
+      <a href="" class="fa fa-facebook"></a>       
+      <a href="#" class="fa fa-linkedin"></a>
+      
+
+      <br>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+
+jQuery($ => {
+    // The speed of the scroll in milliseconds
+    const speed = 1000;
+
+    $('a[href*="#"]')
+      .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
+      .unbind('click.smoothScroll')
+      .bind('click.smoothScroll', event => {
+        const targetId = event.currentTarget.getAttribute('href').split('#')[1];
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          event.preventDefault();
+          $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
+        }
+      });
+  });
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+        $(".jumbotron").addClass("blur");
+    } else {
+        $(".jumbotron").removeClass("blur");
+    }
+});
+
+
+var items = document.querySelectorAll(".timeline li");
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      if(!items[i].classList.contains("in-view")){
+        items[i].classList.add("in-view");
+      }
+    } else if(items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+ 
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+} 
+
+$(document).ready(function() {
+        // Transition effect for navbar 
+        $(window).scroll(function() {
+          // checks if window is scrolled more than 500px, adds/removes solid class
+          if($(this).scrollTop() > 500) { 
+              $('.navbar').addClass('solid');
+          } else {
+              $('.navbar').removeClass('solid');
+          }
+        });
+});
+
+
+
+
+</script>
+
+</body>
+</html>
