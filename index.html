@@ -4,8 +4,8 @@
   
   <title>EQSPL</title>
   <meta charset="utf-8">
-  <link rel="shortcut icon" type="image/x-icon" href="logo.ico" />
-  <meta name="viewport" content="width=1000; user-scalable=1;" />  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="EQS-Logo.ico" />
+  <meta name="viewport" content="width=1200,user-scalable=1;" />  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -22,10 +22,17 @@
     /* font: 400 15px Lato, sans-serif; */
    font-family: KoHO;
     line-height: 1.8;
-    background-color: #7fb7ec;
-    
+    /* background: linear-gradient(to bottom right, #ffffff 0%, #b2cece 100%); */
+    background-color: #ffffff;
   }
-
+  html,body
+{
+    width: 100%;
+    /* height: 100%; */
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 
 
   h1{
@@ -34,12 +41,12 @@
   }
   h2 {
     /* font-size: 24px; */
-    font-family:Roboto Slab;
+    font-family:Lora;
     font-size: 3.2vw;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #df3434;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 30px
   }
   h3{
     color: #303030;
@@ -48,23 +55,53 @@
   h4 {
    
     font-size: 1.9vw;
-    line-height: 2em;
+    /* line-height: 2em; */
     color: #303030;
     font-weight: 400;
     margin-bottom: 30px;
   }  
   p{
+    
 font-size: 20px;
   }
  
 
 
+  .parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+
+  
+}
+.image2 {
+  position: absolute;
+  top: 45%;
+   left: 113%;
+   width: 80px;
+   height: 80px;
+   margin-top: -250px; /* Half the height */
+   margin-left: -300px; /* Half the width */
+  
+}
+
+
+
+
+
   .jumbotron {
     
-    width: 100%;
-    height: 100vh;
-    background-image: url('j.jpg');
     
+
+    
+    position: relative;
     background-repeat: no-repeat;
   background-attachment: contain;
   background-size: cover;
@@ -131,30 +168,114 @@ align-items: stretch
 
 #about{
   
-  background-image: 
+  /* background-image: 
     linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(nightdome.jpg);
+    url(Power\ Plant.jpg);
   background-size: cover;
-  color: rgba(255, 255, 255, 0.945);
+  color: rgba(0, 0, 0, 0.945); */
   
   
 }
 
 #value{
    
-  background-image: 
+  /* background-image: 
     linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
     url(hd2.jpg);
   background-size: cover;
-  color: rgba(255, 255, 255, 0.945);
+  color: rgba(255, 255, 255, 0.945); */
 
 }
+
+.maincontainer > .front
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    
+    width: 302px;
+    height: 290px;
+    
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+/* leader board work below */
+.maincontainer
+{
+  
+    width: 302px;
+    height: 299px;
+    margin: 10px;
+    float: left; /* stack each div horizontally */
+    padding-bottom: 10px;
+}
+.maincontainer img
+{
+   border-radius: 10px;
+}
+
+.back h4
+{
+    position: absolute;
+    text-align: center;
+    
+}
+
+
+.back p
+{
+    position: absolute;
+    top: 50px;
+    margin-top:30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.front h4
+{
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    top: 225px;
+    color: #000;
+}
+
+
+.maincontainer > .back
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 302px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 1px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+.maincontainer:hover > .front
+{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.maincontainer:hover > .back
+{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+
+
+
 
 
 
@@ -172,77 +293,6 @@ margin-bottom:-30px;
 } */
 
 
-.rainbow-text {
-  /* Create a conic gradient. */
-  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
-  background: #CA4246;
-  background-color: #CA4246;
-  background: conic-gradient(
-    #ec2828 16.666%, 
-    #e44b30 16.666%, 
-    #11aa0c 33.333%, 
-    #0b8d46 33.333%, 
-    #db250d 50%, 
-    #d9fc65 50%, 
-    #f1410b 66.666%, 
-    #12eb41 66.666%, 
-    #e94311 83.333%, 
-    #58f87b 83.333%);
-  
-  /* Set thee background size and repeat properties. */
-  background-size: 57%;
-  background-repeat: repeat;
-  
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  
-  /* Animate the text when loading the element. */
-  /* This animates it on page load and when hovering out. */
-  animation: rainbow-text-animation-rev 0.5s ease forwards;
-
-  cursor: pointer;
-}
-
-/* Add animation on hover. */
-.rainbow-text:hover {
-  animation: rainbow-text-animation 0.5s ease forwards;
-}
-
-/* Move the background and make it larger. */
-/* Animation shown when hovering over the text. */
-@keyframes rainbow-text-animation {
-  0% {
-    background-size: 57%;
-    background-position: 0 0;
-  }
-  20% {
-    background-size: 57%;
-    background-position: 0 1em;
-  }
-  100% {
-    background-size: 300%;
-    background-position: -9em 1em;
-  }
-}
-
-/* Move the background and make it smaller. */
-/* Animation shown when entering the page and after the hover animation. */
-@keyframes rainbow-text-animation-rev {
-  0% {
-    background-size: 300%;
-    background-position: -9em 1em;
-  }
-  20% {
-    background-size: 57%;
-    background-position: 0 1em;
-  }
-  100% {
-    background-size: 57%;
-    background-position: 0 0;
-  }
-}
 
 
 
@@ -253,13 +303,11 @@ margin-bottom:-30px;
   -ms-filter: blur(8px);
   filter: blur(8px);
 }
-.spacevalue{
-  padding-left: 3cm;
-}
+
 
 
   .container-fluid {
-    padding: 60px 50px;
+    padding: 40px 40px;
     /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); */
     
   
@@ -366,32 +414,25 @@ margin-bottom:-30px;
   .navbar {
     height: 50px;
     margin-bottom: 0;
-    background-color:rgb(97, 95, 95);
+    /* margin-left: 10; */
+    background-color:rgb(255, 255, 255);
     
-    z-index: 9999;
+    z-index:9999;
     border: 0;
     font-size: 14px !important;
     line-height: 1.42857143 !important;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     border-radius: 0;
     font-family: Montserrat, sans-serif;
     
-    background-color: transparent;
+    /* background-color: transparent; */
    
   }
 
   .navbar.solid {
-  background-color: #777677;
+  background-color: #66c9e7;
   transition: background-color 1s ease 0s;
-  box-shadow: 0 0 4px grey;
-}
-.navbar.solid .navbar-brand {
-  color: #C57ED3;
-  transition: color 1s ease 0s;
-}
-.navbar.solid .navbar-nav > li > a {
-  color: #C57ED3;
-  transition: color 1s ease 0s;
+  box-shadow: 0 0 4px rgb(255, 255, 255);
 }
 
 
@@ -402,7 +443,10 @@ margin-bottom:-30px;
 
   .navbar li a, .navbar .navbar-brand {
 
-    color: #fff !important;
+    color: rgb(243, 53, 53) !important;
+    /* font-style: oblique; */
+    font-family:Lora;
+    font-weight: bold;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #ffffff !important;
@@ -445,101 +489,6 @@ margin-bottom:-30px;
     opacity: 0.7;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body .timeline {
-  font: normal 16px/1.5 "Titillium Web", sans-serif;
-  background: linear-gradient(54deg, #9164ff, #8bfff4);
-  color: #3c3f64;
-  overflow-x: hidden;
-  padding-bottom: 50px;
-}
-
-.timeline ul li {
-  list-style-type: none;
-  position: relative;
-  width: 6px;
-  margin: 0 auto;
-  padding-top: 50px;
-  background: #fff;
-}
-.timeline ul li::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) rotate(45deg);
-  width: 20px;
-  height: 20px;
-  z-index: 2;
-  background: #eee;
-}
-.timeline ul li div {
-  position: relative;
-  bottom: 0;
-  width: 400px;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-}
-.timeline ul li div time {
-  position: absolute;
-  background: #f5af19;
-  width: 80px;
-  height: 30px;
-  top: -15px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 2px;
-}
-.timeline ul li div div {
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.timeline ul li div div p {
-  text-align: center;
-}
-.timeline ul li div .discovery {
-  margin-right: 10px;
-}
-.timeline ul li:nth-of-type(odd) > div {
-  left: 45px;
-}
-.timeline ul li:nth-of-type(even) > div {
-  left: -439px;
-}
-
-.timeline ul li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-.timeline ul li:nth-of-type(odd) div {
-  transform: translate3d(100px, -10px, 0) rotate(10deg);
-}
-.timeline ul li:nth-of-type(even) div {
-  transform: translate3d(-100px, -10px, 0) rotate(10deg);
-}
-.timeline ul li.in-view div {
-  transform: none;
-  visibility: visible;
-  opacity: 1;
-}
-
 
 /* 
 @media screen and (max-width: 600px) {
@@ -563,8 +512,61 @@ body .timeline {
     text-align: left;
   } */
 
+  logo-slider {
+  --image-size: 200px;
+  border: 1px solid #575757;
+  padding: 20px;
+  overflow: hidden;
+  max-width: max-content;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+logo-slider:hover div {
+  animation-play-state: paused;
+}
+logo-slider div {
+  display: flex;
+  position: relative;
+  animation: marquee 10s linear infinite;
+  justify-content: space-around;
+}
+logo-slider img {
+  display: block;
+  min-width: var(--image-size);
+  height: var(--image-size);
+  margin: 0 1vw;
+}
+logo-slider:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /* background: linear-gradient(to right, rgb(184, 182, 182), rgba(255, 255, 255, 0) 80px, rgba(255, 255, 255, 0) calc(100% - 80px), white); */
+}
+@media (max-width: 900px) {
+  logo-slider {
+    --image-size: 50px;
+    --image-size: min(max(50px, 10vw), 100px);
+  }
+}
 
-@media screen and (max-width: 900px) {
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+/* @media screen and (max-width: 900px) {
  
 
  
@@ -599,6 +601,55 @@ body .timeline {
   .timeline ul li:nth-of-type(even) > div {
     left: 45px;
   }
+} */
+
+
+.item-1, 
+.item-2, 
+.item-3 {
+	position: absolute;
+  display: block;
+  font-family: Lora;
+	top: 40%;
+  
+  width: 60%;
+  
+  font-size: 30px;
+  color: #ffffff;
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 28%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 28%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 28%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
 }
 
 
@@ -642,6 +693,7 @@ body .timeline {
       margin-bottom: 35px;
     }
   }
+
   @media screen and (max-width: 480px) {
    
     .logo {
@@ -653,8 +705,7 @@ body .timeline {
       
       
     }
-  
-  
+    
     
     .col-sm-4 {
       text-align: center;
@@ -669,6 +720,46 @@ body .timeline {
     
    
   }
+/* 
+  @media screen and (min-width: 768px) {
+  #myNavbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+ */
 
 
   
@@ -677,6 +768,7 @@ body .timeline {
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
   <nav  id="navbar" class="navbar navbar-default navbar-fixed-top">
+    
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -684,8 +776,10 @@ body .timeline {
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-        <a class="navbar-brand" href="#">
-          <img src="logo.ico" width="50" height="35" class="d-inline-block align-top" alt="">
+        
+      
+        <a class="navbar-brand" href="#myPage">
+          <img src="esql brand.png" width="420px" height="120px" style="margin-top:-45px;margin-left:-60px;"  alt="">
         </a>
         <!-- <a class="navbar-brand" href="#myPage">HOME<img src="logo.ico"></a> -->
       </div>
@@ -697,7 +791,13 @@ body .timeline {
           <li><a href="#resources">RESOURCES</a></li>
           
           <li><a href="#contact">CONTACT</a></li>
-          <li><a href="#contact">DOWNLOAD</a></li>
+          <li> <a href="https://drive.google.com/file/d/1I1QLShk054fKrG5tDTZSdYb1Us0E3jKH/view?usp=sharing" download rel="noopener noreferrer" target="_blank">
+            DOWNLOAD
+         </a></li>
+
+
+
+         
           
         </ul>
       </div>
@@ -716,30 +816,52 @@ body .timeline {
   
 
 
+<div class="parent">
+  <img class="image1" src="jumbo.jpg" />
 
+  <img class="image2" src="iso.png" />
 
+  <p class="item-1">PROVIDING SECOND PARTY  INSPECTION</p>
+
+<p class="item-2">INDEPENDENT THIRD
+  PARTY INSPECTION</p>
+
+<p class="item-3">PRE & POST SHUTDOWN PROJECT INSPECTION</p>
   
 
+</div>
+
+
+
+
+<!-- 
 <div class="jumbotron text-center"  >
   
   <h1  id="title" style="padding-top: 3cm; font-size: 60px;" >EBULLIENT QUALITY SERVICES <br><br> PRIVATE LIMITED</h1> 
   <p style="color:rgb(245, 245, 18);font-family:Caveat;font-size:1cm;">Quality Endures</p>
 
+
+
+
+ 
+
+
+
   <a href="#about"><i class="material-icons" style="font-size:48px;color:rgb(131, 236, 99)">arrow_downward</i> </a>
-</div>
+</div> -->
 
 <!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<div id="about" class="container">
   <div class="row">
-    <div class="col-sm-8">
-      <h2 class="spacevalue slideanim" style="color:aliceblue">About Us</h2><br>
-      <p class="spacevalue" style="  color: rgba(255, 255, 255, 0.945);">We proudly introduce our self of “Ebullient Quality Services Private Limited” (EQSPL) as was established at 2020.
+    <div >
+      <h2 style="text-align: center;" class=" slideanim" >About Us</h2><br>
+      <p class="spacevalue">We proudly introduce our self of “Ebullient Quality Services Private Limited” (EQSPL) as was established at 2020.
         We offer Engineering & Consulting, Expediting, to clients and assist them to manage their Quality, Safety, Health & Environmental plans.
       </p>
       <p class="spacevalue">Ebullient Quality Services Private Limited (EQSPL) is a customer-focussed, innovative and independent, technical, quality & safety services organization, dedicated to providing future- proof solutions through technological excellence for the success of its customers with the highest level of integrity. With a presence at locations in PAN India and all over countries in worldwide and through digital means, we are always connected to you, our esteemed customer, anywhere, anytime.</p>
       <p class="spacevalue" > We are proud to provide increasing levels of services to the best known, largest global and national companies as well as medium and small industries in diverse sectors like Oil & Gas, Petrochemical, Power, Manufacturing, Chemicals, Automobiles, etc. 
         . </p>
-      <br><a href=" #contact"> <button class="btn btn-default btn-lg" style="margin-left: 100px;">Get in Touch</button></a>
+      <!-- <br><a href=" #contact"> <button class="btn btn-default btn-lg" style="margin-left: 100px;color: #000;">Get in Touch</button></a> -->
     </div>
     
       
@@ -750,12 +872,12 @@ body .timeline {
 
 
 
-<div id="value"  class="container-fluid">
+<div id="value"  class="container">
   <div class="row">
     
 
-    <div  class="col-sm-8">
-      <h2 style="color:aliceblue" class="spacevalue slideanim">Our Values</h2><br>
+    <div  >
+      <h2 style="text-align: center;" class="spacevalue slideanim">Our Values</h2><br>
       <p class="spacevalue"><strong>MISSION:</strong>
       <ul  style="font-size:20px; " class="spacevalue">
         <li  >
@@ -803,7 +925,44 @@ body .timeline {
 
   </div>
 </div>
-  
+<div  class="container" style="padding-bottom: 20px;">
+  <h2 class="slideanim" style="text-align:center">Leadership</h2>
+  <div class="col-sm-6">
+<div class="maincontainer" style="text-align:center">
+  <div class="back">
+      <h4 > Founder & Managing Director</h4>
+      <p>A Mechanical Engineering professional worked in multisector as certified welding inspector 
+        of quality representative who is energetic in execution, persistent and highly motivated person.</p>
+  </div>
+  <div class="front">
+      <div class="image">
+      <img style="width: 292px;
+      height: 289px;" src="parameswaran.jpg">
+      <h4 style="padding-left:20px ;font-family:Noto Serif;" >Parameswaran Kaliraj</h4>
+      </div>
+  </div>
+</div>
+
+</div>
+<div class="col-sm-6">
+<div class="maincontainer " style="text-align: center;padding-left: 160px;">
+  <div class="back">
+      <h4 >Co-Founder & Executive Director</h4>
+      <p>A Mechanical Engineering professional worked in multisector as plant inspector as quality 
+        representative who is adaptable, diligent and highly passionate person.</p>
+  </div>
+  <div class="front">
+      <div class="image">
+      <img style="width: 292px;
+      height: 289px;" src="balaji1.jpg">
+      <h4 style="padding-left:45px ;font-family:Noto Serif;">Balaji Shanmugam</h4>
+      </div>
+  </div>
+</div>
+</div>
+
+</div>
+
 
 
 
@@ -813,11 +972,11 @@ body .timeline {
 
 
 <!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center slideanim" style="background-color:rgb(140, 204, 183)" >
-  <h2>SERVICE VALUES</h2>
+<div id="services" class="container-fluid text-center"  >
+  <h2 class="slidanim">SERVICE VALUES</h2>
   <h4>WAY WE DO</h4>
   <br>
-  <div class="row slideanim">
+  <div class="row ">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-off logo-small"></span>
       <h4>QUALITY</h4>
@@ -835,7 +994,7 @@ body .timeline {
     </div>
   </div>
   <br><br>
-  <div class="row slideanim">
+  <div class="row ">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-leaf logo-small"></span>
       <h4>ETHICS</h4>
@@ -856,8 +1015,10 @@ body .timeline {
 <!-- <div class="spacefiller"style="background-color:rgb(74, 190, 142) ;"></div> -->
 
 
-<div >
-  <h2  class="slideanim"  style="text-align:center;">MAJOR SERVICES</h2>
+
+
+
+  <h2  class="slideanim container"  style="text-align:center;">MAJOR SERVICES</h2>
   
   <div class="col-sm-6" style="font-size:1.7vw;padding-left: 100px;padding-bottom: 20px;" >
   
@@ -866,9 +1027,13 @@ body .timeline {
       <li>Welding documents preparation (WPS & PQR & WPQR)</li>
       
         <li>Stage, In-Process Inspection & Final Inspection</li>
-        <li>Expediting</li>
-        <li>Softline & Hard line Services</li>
+        <li>Expediting & Commissioning Inspection</li>
+        <li>Softline & Hard line Services </li>
         <li>Site Services - Onshore/Off-shore</li>
+        <li>Lifting equipment Inspection </li>
+        
+
+        
     </ul>
   </div>
   <div class="col-sm-6" style="font-size:1.7vw;padding-left:60px;padding-bottom: 20px;">
@@ -878,8 +1043,11 @@ body .timeline {
      
       <li>Welding, Coating & Painting Inspection</li>
       <li>Pre-Shipment Inspection</li>
+      <li>Vibration analysis Inspection</li>
+      <li>Dossier Preparation / MDR</li>
+      
       <li>Shutdown / Turnaround Inspection</li>
-      <li style="padding-bottom: 40px;" >Provision Technical Manpower</li>
+      <li  >Provision Technical Manpower</li>
         
     </ul>
   </div>
@@ -887,10 +1055,8 @@ body .timeline {
 
 
 
-
-
-<div class="sector"  >
-  <h2  class="slideanim" style="padding-top: 20px;">INDUSTRIES COVERED</h2>
+  <h2 class="slideanim " style="text-align:center;">INDUSTRIES COVERED</h2>
+  <div class="sector container"  >
 </div> 
   <!-- services done  -->
   
@@ -910,37 +1076,37 @@ body .timeline {
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <h4><b>Oil and Gas Sector</b></h4>
-        <img class="imgindiv" src="ref1.jpg"
-        style="width:50%" alt="powerplant"  >
+        <img class="imgindiv" src="Oil and gas Sector.jpeg"
+        style="width:600px;height: 400px;" alt="powerplant"  >
       </div>
       <div class="item">
         <h4><b>Power Sector</b></h4>
-        <img class="imgindiv" src="powerplant.png" style="width:50%"
+        <img class="imgindiv" src="Power Plant.jpg" style="width:600px;height: 400px;"
         alt="powerplant"  >
       </div>
       <div class="item">
         <h4><b>Transport and Automobile Sector</b></h4>
-        <img class="imgindiv" src="transport.png" style="width:50%" alt="powerplant"  >
+        <img class="imgindiv" src="Automobile.jpg" style="width:600px;height: 400px;" alt="powerplant"  >
       </div>
       <div class="item">
         <h4><b> Petro Chemical Sector</b></h4>
-        <img class="imgindiv" src="chemical.png" style="width:50%" alt="powerplant"  >
+        <img class="imgindiv" src="Petro Chemical.jpg" style="width:600px;height: 400px;" alt="powerplant"  >
       </div>
       <div class="item">
         <h4><b>Electrical & Instrumentation Sector</b></h4>
-        <img class="imgindiv" src="ei.jpeg" style="width:50%" alt="electrical"  >
+        <img class="imgindiv" src="electric.jpg" style="width:600px;height: 400px;" alt="electrical"  >
       </div>
       <div class="item">
         <h4><b>Food Industry</b></h4>
-        <img class="imgindiv" src="food.jpg" style="width:50%" alt="electrical"  >
+        <img class="imgindiv" src="food.jpg" style="width:600px;height: 400px;" alt="electrical"  >
       </div>
       <div class="item">
         <h4><b>Softline / Hardline Industry</b></h4>
-        <img class="imgindiv" src="hardline1.jpg" style="width:50%" alt="electrical"  >
+        <img class="imgindiv" src="Hardline.jpg" style="width:600px;height: 400px;" alt="electrical"  >
       </div>
       <div class="item">
         <h4><b>Plastic Industry</b></h4>
-        <img class="imgindiv" src="plastic.jpg" style="width:50%" alt="electrical"  >
+        <img class="imgindiv" src="plastic.jpg" style="width:600px;height: 400px;" alt="electrical"  >
       </div>
     </div>
 
@@ -965,7 +1131,7 @@ body .timeline {
 
 
  
-  
+<!--   
 <section id="resources" class="timeline">
   <h2 class="slideanim" style="text-align:center;padding-top:20px;">RESOURCES</h2>
   <ul>
@@ -1074,58 +1240,76 @@ body .timeline {
       </div>
     </li>
   </ul>
-</section>
+</section> -->
 
-
-<div id="lead" class="container" style="padding-bottom: 20px;">
-  <h2 style="text-align:center;">LEAD MEMBERS</h2>
-<div class="col-sm-6" style="padding-top: 20px;padding-bottom: 20px;">
-<div class="card" style="background-color:rgb(140, 204, 183)">
-  <img src="parameswaran.jpg" alt="parameswaran" style="width:50%; padding-top: 15px; height: 50%;border-radius:100%;">
-  <p>Parameswaran Kaliraj </p>
-  <p class="title" style="font-size:16px;">Founder & Managing Director </p>
-  <p><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=parameswaran@eqspl.com&body=my-text"><i class="fa fa-envelope"></i></a>
-  </p>
+<h2 id="resources"  class="slideanim container"  style="text-align:center;">RESOURCES</h2>
   
-</div>
-</div>
-<div class="col-sm-6"  style="padding-top: 20px;padding-bottom: 20px;">
-<div class="card" style="background-color:rgb(140, 204, 183)">
-  <img src="balaji.jpg" alt="balaji"style="width:50%; padding-top: 15px; height: 50%;border-radius:100%;">
-  <p>Balaji Shanmugam </p>
-  <p class="title" style="font-size:16px;">Co-Founder & Executive Director</p>
-  <p><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=balaji@eqspl.com&body=my-text"><i class="fa fa-envelope"></i></a>
-  </p>
-</div>
-</div>
+  <div class="col-sm-6" style="font-size:1.7vw;padding-left: 100px;padding-bottom: 20px;" >
+  
+    <ul>
+      <li>QA/QC Inspector</li>
+   
+      <li>Mechanical / Piping Inspector</li>
+      
+        <li>Coating / Painting Inspector - NACE / FROSIO / B-GAS</li>
+        <li>E&I Inspector – APEX / COMP-EX</li>
+        <li>Food Inspector </li>
+        <li>Civil Inspector</li>
+        
+        
 
-</div>
+        
+    </ul>
+  </div>
+  <div class="col-sm-6" style="font-size:1.7vw;padding-left:60px;padding-bottom: 20px;">
+    <ul>
+      <li>NDE Technician / Inspector – ASNT / PCN / EN</li>
+      <li>Welding Inspector - AWS / CSWIP</li>
+     
+      <li>Lead Auditor - IRCA / CQI</li>
+      <li>Plant Inspector - API-510,570,580,653,936 etc</li>
+      <li>Automobile Inspector</li>
+      <li>Soft-line Inspector</li>
+      <li>Hard-line Inspector</li>
+      
+        
+    </ul>
+  </div>
 
 
-<!-- 
-</div>
-    <div class="col-sm-12" style="background-color: #73b9fc;"  >
-<h2 class="slideanim"style="text-align:center;padding-top:30px;"> MAJOR SERVICES</h2>
-<ul style="text-align:center" class="rolldown-list" id="myList">
-  <p class="linea" style="font-size:20px">Vendor Evaluation / Supplier Audit</p>
-  <p class="lineb" style="font-size:20px">Raw Material Inspection	<p>
-  <p class="linea" style="font-size:20px">Welding documents Preparation (WPS, PQR & WQT, QAP)</p>
-  <p class="lineb" style="font-size:20px">Stage, In-Process & Final Inspection<p>
-  <p class="linea" style="font-size:20px">Mechanical Inspection-Rotating & Static Equipment</p>
-  <p class="lineb" style="font-size:20px">Expediting <p>
-  <p class="linea" style="font-size:20px">Shutdown/Turnaround Inspection <p>
-  <p class="lineb" style="font-size:20px">Provision Technical Manpower </p>
-  <p class="linea" style="font-size:20px;">Pre-Dispatch Inspection </p>
 
-</ul> 
-</div> -->
+<logo-slider>
+  
+  <div>
+    <img src="API Systems.jpg">
+    <img src="Automobile.jpg">
+    <img src="Boiler.jpg">
+    <img src="Ceramics.jpg">
+    <img src="Ceramic Tiles.jpg">
+    <img src="Coating.jpg">
+    <img src="DPT.jpg">
+    <img src="Hardline.jpg">
+   </div>
+  
+  <div>
+    <img src="Lifting Equipment.jpg">
+    <img src="Erection.jpg">
+    <img src="Garments.jpg">
+    <img src="Fabrication.jpg">
+    <img src="Pipe Spool.png">
+    <img src="Pumps.jpg">
+    <img src="Turbine.jpg">
+    <img src="Tanks.jpeg">
+  </div>
+   
+</logo-slider>
 
 
 
 
 <!-- Container (Contact Section) -->
-<div id="contact" style="background-color:rgb(190, 178, 178);" >
-  <h2 style="text-align:center;padding-top:10px;">CONTACT</h2>
+<div id="contact" style="background-color:rgb(163, 162, 162);" >
+  <h2 style="text-align:center;margin-top: -40px;">CONTACT</h2>
   <div class="row">
     <div class="col-sm-4" style="padding-left: 40px;">
         
@@ -1146,33 +1330,35 @@ body .timeline {
 
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-sm-4" style="padding-left: 40px;">
       <h3 style="font-style: bold;">SERVICE LOCATIONS</h3>
-        <p>#1919, RKV Nagar, Pichandar Kovil, Mannachanalur, Trichy, Tamilnadu</p>
+        <p>#9A RKV Nagar, Pichandar Kovil, Trichy, Tamilnadu</p>
         <p>Chennai-Under Process</p>
-        <p>Kozhikode-Under Process</p>
+        
       
     </div>
+    
 
-    <div class="col-sm-4">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d636.9924751804491!2d78.70693637668677!3d10.874332755041713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1620718920584!5m2!1sen!2sin" width="contain" height="contain" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="col-sm-4 " style="padding-left: 20px;padding-top: 10px;" >
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d636.9924751804491!2d78.70693637668677!3d10.874332755041713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1620718920584!5m2!1sen!2sin" width="300px" height="200px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
+      
+    </div>  
+    
+    <div class="col-sm-12" style="padding-top: 40px;text-align: center;">
+      <img style="width:300px;height: 200px;" src="iso.jpg">
     </div>
 
-   
-
-   
-
-   
 
   </div>
 
  
-<p style="font-family:Merienda One;color:black;padding-top:10px;text-align:center;"> Webpage Developed by Kkrish N A , contact through-<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bestkkrish@gmail.com&body=my-text"><i class="fa fa-envelope"></i></a>
-  <a href="https://www.linkedin.com/in/kkrish-n-a-70705a179/"><i class="fa fa-linkedin"></i></a> 
-  <a href="https://www.instagram.com/kkrish_n/"><i class="fa fa-instagram"></i></a>
+<p style="font-family:Merienda One;color:black;padding-top:25px;margin-bottom: -50px; text-align:center;font-size:8px"> Webpage Developed by Kkrish N A , contact through-<a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bestkkrish@gmail.com&body=my-text"><i style="font-size: 25px;" class="fa fa-envelope"></i></a>
+  <a href="https://www.linkedin.com/in/kkrish-n-a-70705a179/"><i style="font-size: 25px;" class="fa fa-linkedin"></i></a> 
+  <a href="https://www.instagram.com/kkrish_n/"><i style="font-size: 25px;" class="fa fa-instagram"></i></a>
 </p>
 </div>
+
 
 <script>
 $(document).ready(function(){
@@ -1203,7 +1389,7 @@ $(document).ready(function(){
       var pos = $(this).offset().top;
 
       var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
+        if (pos < winTop + 900) {
           $(this).addClass("slide");
         }
     });
@@ -1238,17 +1424,17 @@ jQuery($ => {
 });
 
 
-var items = document.querySelectorAll(".timeline li");
+// var items = document.querySelectorAll(".timeline li");
 
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
+// function isElementInViewport(el) {
+//   var rect = el.getBoundingClientRect();
+//   return (
+//     rect.top >= 0 &&
+//     rect.left >= 0 &&
+//     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//   );
+// }
 
 function callbackFunc() {
   for (var i = 0; i < items.length; i++) {
@@ -1285,10 +1471,15 @@ $(document).ready(function() {
           if($(this).scrollTop() > 500) { 
               $('.navbar').addClass('solid');
           } else {
+
+
+
               $('.navbar').removeClass('solid');
           }
         });
 });
+
+
 
 
 
